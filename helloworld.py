@@ -8,7 +8,11 @@ from valid_day import valid_day
 
 
 form="""
+<<<<<<< HEAD
 <form method = "post">
+=======
+<form method="post">
+>>>>>>> 986b0c0e7a4037056a7eb5ae9fd0c2e85ef42adf
     What is your birthday?
     <br>
     <label> Month
@@ -29,9 +33,15 @@ form="""
 """
 class MainPage(webapp2.RequestHandler):
     def get(self):
+        print 'get'
         self.response.out.write(form)
 
+<<<<<<< HEAD
     def post(self):  
+=======
+    def post(self):
+        print 'post'
+>>>>>>> 986b0c0e7a4037056a7eb5ae9fd0c2e85ef42adf
         self.response.out.write("lash and banter")
 
         # user_month = valid_month(self.request.get('month'))

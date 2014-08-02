@@ -8,7 +8,7 @@ from valid_day import valid_day
 
 
 form="""
-<form methord = "post">
+<form method = "post">
     What is your birthday?
     <br>
     <label> Month
@@ -31,18 +31,17 @@ class MainPage(webapp2.RequestHandler):
     def get(self):
         self.response.out.write(form)
 
-    def post(self):
-    
-         # self.response.out.write("lash and banter")
+    def post(self):  
+        self.response.out.write("lash and banter")
 
-        user_month = valid_month(self.request.get('month'))
-        user_day = valid_day(self.request.get('day'))
-        user_year = valid_year(self.request.get('year'))
+        # user_month = valid_month(self.request.get('month'))
+        # user_day = valid_day(self.request.get('day'))
+        # user_year = valid_year(self.request.get('year'))
 
-        if not(user_month and user_day and user_year):
-            self.response.out.write(form)
-        else:
-            self.response.out.write('gak')
+        # if not(user_month and user_day and user_year):
+        #     self.response.out.write(form)
+        # else:
+        #     self.response.out.write('gak')
 
         # q = self.request.get("q")
         # self.response.out.write(q)
